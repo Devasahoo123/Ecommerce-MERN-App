@@ -2,7 +2,7 @@ import productModel from '../../models/productModel.js'
 
 const getProductDetails = async (req,res)=>{
     try {
-        const {productId} = await req.body();
+        const {productId} = await req.body;
 
         const product = await productModel.findById(productId);
 

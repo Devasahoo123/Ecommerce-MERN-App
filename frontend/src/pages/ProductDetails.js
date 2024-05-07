@@ -46,7 +46,7 @@ const ProductDetails = () => {
     })
     setLoading(false)
     const dataReponse = await response.json()
-
+    console.log(dataReponse);
     setData(dataReponse?.data)
     setActiveImage(dataReponse?.data?.productImage[0])
 
@@ -197,8 +197,8 @@ const ProductDetails = () => {
                 </div>
 
                 <div className='flex items-center gap-2 text-2xl lg:text-3xl font-medium my-1'>
-                  <p className='text-red-600'>{displayINRCurrency(data.sellingPrice)}</p>
-                  <p className='text-slate-400 line-through'>{displayINRCurrency(data.price)}</p>
+                  <p className='text-red-600'>{displayINRCurrency(data?.sellingPrice)}</p>
+                  <p className='text-slate-400 line-through'>{displayINRCurrency(data?.price)}</p>
                 </div>
 
                 <div className='flex items-center gap-3 my-2'>
@@ -219,7 +219,7 @@ const ProductDetails = () => {
 
 
       {
-        data.category && (
+        data?.category && (
           <CategroyWiseProductDisplay category={data?.category} heading={"Recommended Product"}/>
         )
       }
