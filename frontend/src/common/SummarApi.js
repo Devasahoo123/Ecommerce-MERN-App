@@ -1,0 +1,60 @@
+
+const backendDomain = "http://localhost:1000";
+
+export const SummarApi = {
+    signUp: {
+        url: `${backendDomain}/api/signup`,
+        method: "POST"
+    },
+    signIn: {
+        url: `${backendDomain}/api/signin`,
+        method: "POST"
+    },
+    current_user: {
+        url: `${backendDomain}/api/user-details`,
+        method: "GET"
+    },
+    logout_user: {
+        url: `${backendDomain}/api/logout`,
+        method: "GET"
+    },
+    allUser: {
+        url: `${backendDomain}/api/all-user`,
+        method: "GET"
+    },
+    updateUser: {
+        url: `${backendDomain}/api/update-user`,
+        method: "POST"
+    },
+    uploadProduct : {
+        url: `${backendDomain}/api/upload-product`,
+        method: "POST"
+    },
+    allProduct : {
+        url: `${backendDomain}/api/get-product`,
+        method: "GET"
+    },
+    updateProduct : {
+        url: `${backendDomain}/api/update-product`,
+        method: "POST"
+    },
+    categoryProduct : {
+        url: `${backendDomain}/api/get-cateogoryProduct`,
+        method: "GET"
+    },
+    categoryWiseProduct : {
+        url: `${backendDomain}/api/category-product`,
+        method: "POST"
+    },
+    addToCartProduct : {
+        url : `${backendDomain}/api/addtocart`,
+        method : 'POST'
+    },
+    productDetails : {
+        url : `${backendDomain}/api/product-details`,
+        method : 'POST'
+    }
+
+};
+
+export default SummarApi;
