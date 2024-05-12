@@ -14,6 +14,9 @@ app.use(cors(
 ));
 // parse requests of content-type - application
 app.use(express.json());
+app.get("/", (req, res) => {
+    res.send("Service is Live")
+})
 app.use("/api",router);
 
 
