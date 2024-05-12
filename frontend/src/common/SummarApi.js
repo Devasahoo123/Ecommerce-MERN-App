@@ -1,4 +1,3 @@
-
 const backendDomain = "http://localhost:1000";
 
 export const SummarApi = {
@@ -53,7 +52,32 @@ export const SummarApi = {
     productDetails : {
         url : `${backendDomain}/api/product-details`,
         method : 'POST'
+    },
+    addToCartProductCount : {
+        url : `${backendDomain}/api/countAddToCartProduct`,
+        method : 'GET'
+    },
+    addToCartProductView : {
+        url : `${backendDomain}/api/view-cart-product`,
+        method : 'GET'
+    },
+    updateCartProduct : {
+        url : `${backendDomain}/api/update-cart-product`,
+        method : 'POST'
+    },
+    deleteAddToCartProduct : {
+        url : `${backendDomain}/api/delete-cart-product`,
+        method : 'POST'
+    },
+    searchProduct: {
+        url : `${backendDomain}/api/search`,
+        method : 'GET'
+    },
+    filterProduct : {
+        url : `${backendDomain}/api/filter-product`,
+        method : 'POST'
     }
+    
 
 };
 

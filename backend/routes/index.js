@@ -13,6 +13,13 @@ import updateProductController from '../controller/product/updateProduct.js';
 import getCateogoryProduct from '../controller/product/getCategoryProductOne.js';
 import getCateogoryWiseProduct from '../controller/product/getCategoryWiseProduct.js';
 import getProductDetails from '../controller/product/getProductDetails.js';
+import addToCartController from '../controller/user/addToCartController.js';
+import countAddToCartProduct from '../controller/user/countAddToCartProduct.js';
+import addToCartViewProduct from '../controller/user/addToCartViewProduct.js';
+import updateAddToCartProduct from '../controller/user/updateAddToCart.js';
+import deleteAddToCartProduct from '../controller/user/deleteAddToCartProduct.js';
+import searchProduct from '../controller/product/searchProducts.js';
+import filterProductController from '../controller/product/filterProduct.js';
 
 
 const router = express.Router();
@@ -35,6 +42,19 @@ router.post("/update-product",authThoken,updateProductController);
 router.get("/get-cateogoryProduct",getCateogoryProduct)
 router.post("/category-product",getCateogoryWiseProduct);
 router.post("/product-details",getProductDetails);
+
+
+// user add to cart
+router.post("/addtocart",authThoken,addToCartController)
+router.get("/countAddToCartProduct",authThoken,countAddToCartProduct);
+router.get("/view-cart-product",authThoken,addToCartViewProduct);
+router.post("/update-cart-product",authThoken,updateAddToCartProduct);
+router.post("/delete-cart-product",authThoken,deleteAddToCartProduct);
+
+
+// user search product
+router.get("/search",searchProduct);
+router.post("/filter-product",filterProductController);
 
 
 

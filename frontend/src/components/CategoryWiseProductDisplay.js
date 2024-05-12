@@ -11,6 +11,7 @@ const CategroyWiseProductDisplay = ({category, heading}) => {
     const [data,setData] = useState([])
     const [loading,setLoading] = useState(true)
     const loadingList = new Array(13).fill(null)
+    
 
     const { fetchUserAddToCart } = useContext(Context)
 

@@ -20,7 +20,7 @@ const Login = () => {
     // Hook for navigating to different routes
     const navigate = useNavigate();
     // Accessing context for user details
-    const {fetchUserDetails} = useContext(Context);
+    const {fetchUserDetails,fetchUserAddToCart} = useContext(Context);
 
     // Function to handle input changes
     const handleOnChange = (e)=>{
@@ -52,6 +52,7 @@ const Login = () => {
             toast.success(dataApi.message)
             navigate("/");
             fetchUserDetails()
+            fetchUserAddToCart()
             
         }
         if(dataApi.error){

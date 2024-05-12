@@ -10,6 +10,7 @@ import AllProducts from "../pages/AllProducts.js";
 import CategoryProduct from "../pages/CategoryProduct.js";
 import ProductDetails from "../pages/ProductDetails.js";
 import Cart from "../pages/Cart.js";
+import SearchPages from "../pages/SearchPages.js";
 const router = createBrowserRouter([
     {
         path : '/',
@@ -30,6 +31,14 @@ const router = createBrowserRouter([
             {
                 path:'/sign-up',
                 element:<SignUp/>
+            },
+            {
+                path : 'Cart',
+                element : <Cart/>
+            },
+            {
+                path : '/search',
+                element : <SearchPages/>
             },
             {
                 path: '/product-category',
